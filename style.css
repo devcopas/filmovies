@@ -1,0 +1,23 @@
+.movie-container:empty::before{
+	display: block;
+	background: #f8f9fa;
+	color: #adb5bd;
+	font-size: 2rem;
+	content:"Nothing found, try searching again.";
+	width: 100%;
+	text-align: center;
+	padding: 100px 2rem;
+	margin: 0 15px;
+	border-radius: .5rem;
+}
+
+.text-hidden{
+	overflow: hidden;
+	height: 40px;
+	font-size: 16px;
+}
+
+.cover-image{
+	background-size:contain;
+	height: 200px;
+}
