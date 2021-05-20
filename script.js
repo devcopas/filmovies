@@ -8,7 +8,7 @@
 // searchBtn.addEventListener('click', function () {
 
 // 	const searchInput = document.querySelector('.input-keyword');
-// 	fetch('http://www.omdbapi.com/?apikey=81a8f1a9&s=' + searchInput.value)
+// 	fetch('https://www.omdbapi.com/?apikey=81a8f1a9&s=' + searchInput.value)
 // 		.then(response => response.json())
 // 		.then(response => {
 // 			const movies = response.Search;
@@ -21,7 +21,7 @@
 // 			showDetailsBtn.forEach(btn => {
 // 				btn.addEventListener('click', function () {
 // 					const imdbId = this.dataset.imdbid;
-// 					fetch('http://www.omdbapi.com/?apikey=81a8f1a9&i=' + imdbId)
+// 					fetch('https://www.omdbapi.com/?apikey=81a8f1a9&i=' + imdbId)
 // 						.then(response => response.json())
 // 						.then(m => {
 // 							const movieDetail = showMovieDetail(m);
@@ -54,7 +54,7 @@ searchBtn.addEventListener('click', async function () {
 
 
 function getMovies(keyword) {
-	return fetch('http://www.omdbapi.com/?apikey=81a8f1a9&s=' + keyword)
+	return fetch('https://www.omdbapi.com/?apikey=81a8f1a9&s=' + keyword)
 		.then(response => {
 			if (response.ok === false) {
 				throw new Error(response.statusText);
@@ -89,7 +89,7 @@ document.addEventListener('click', async function (e) {
 
 
 function getMovieDetails(imdbid) {
-	return fetch('http://www.omdbapi.com/?apikey=81a8f1a9&i=' + imdbid)
+	return fetch('https://www.omdbapi.com/?apikey=81a8f1a9&i=' + imdbid)
 		.then(response => response.json())
 		.then(m => m)
 }

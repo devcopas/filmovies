@@ -31,7 +31,7 @@ loadMovies();
 
 
 function getMovies() {
-	return fetch('http://www.omdbapi.com/?s=fast+furious&apikey=81a8f1a9')
+	return fetch('https://www.omdbapi.com/?s=fast+furious&apikey=81a8f1a9')
 		.then(response => {
 			if (response.ok === false) {
 				throw new Error(response.statusText);
@@ -78,7 +78,7 @@ $('#movieDetailModal').on('hidden.bs.modal', async function (e) {
 
 
 function getMovieDetails(imdbid) {
-	return fetch('http://www.omdbapi.com/?apikey=81a8f1a9&i=' + imdbid)
+	return fetch('https://www.omdbapi.com/?apikey=81a8f1a9&i=' + imdbid)
 		.then(response => response.json())
 		.then(m => {
 			console.log(m);
